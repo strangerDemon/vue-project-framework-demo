@@ -1,5 +1,6 @@
 # vue-project-framework-demo
 create a demo of vue-project
+之前的程序结构太乱，整理清晰结构
 
 > vue framework demo
 
@@ -52,18 +53,29 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 │   ├── components                      公共组件目录
 │   │   ├── App.vue                     入口文件
 │   ├── assets                          资源目录，这里的资源会被wabpack构建
-│   │   └── images
-│   │       └── logo.png
 │   ├── routes                          前端路由
 │   │   └── index.js
 │   ├── store                           vuex的状态管理
-│   │   ├── action.js                   配置actions
-│   │   ├── getters.js                  配置getters
 │   │   ├── index.js                    引用vuex，创建store
-│   │   ├── modules                     store模块
-│   │   ├── mutation-types.js           定义常量muations名
-│   │   └── mutations.js                配置mutations
+│   │   └── modules                     store模块
 │   └── views                           页面目录
-│       ├── hello.vue
-│       └── notfound.vue
+│       └── hello.vue
 └── static                          纯静态资源，不会被wabpack构建。
+
+
+# commit log
+  ## 初始化项目模板
+    ### 增加Vuex
+    ### 增加接口文档路径及规范
+    ### 增加静态资源路径及规范
+    ### 增加工具
+
+  ## 页面
+    ### 增加页面
+    ### 拆分页面(views)和组件(components)
+    ### 配置文件读取工具类
+
+  ## 工具
+    ### 引入jquery
+    ### 文件读取工具
+    ### 接口请求工具

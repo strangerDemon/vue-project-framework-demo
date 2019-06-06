@@ -1,9 +1,8 @@
+import HttpUtils  from '../../utils/httpUtils/axiosUtils'
 /**
  * 变量参数
  */
-const state = {
-  index:0
-}
+const state = {}
 
 /**
  * Getters
@@ -17,8 +16,12 @@ const getters = {}
  * @type {Object}
  */
 const mutations = {
-  init (state) {
-    console.log("链接store成功！init")
+  init (state,info) {
+    HttpUtils.post('getSysConfigPara', info).then(
+      function (resp) {
+        console.log("getSysConfigPara:",resp);
+      }
+    );
   },
   query(state,info){
     console.log("query！")

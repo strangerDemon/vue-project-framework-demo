@@ -1,5 +1,5 @@
 <template>
-  <div class='error-page'>
+  <div class='not-found-view'>
     <div id="wrapper">
       <div class="graphic"></div>
       <div class="not-found-text">
@@ -19,7 +19,7 @@
 </template>
 <script>
   export default {
-    name: "error-page",
+    name: "not-found-view",
     directives: {},
     components: {},
     props: {},
@@ -64,7 +64,7 @@
   };
 </script>
 <style lang='postcss' scoped>
-  .error-page {
+  .not-found-view {
     height: 100%;
     min-height: 750px;
     background: #186aa9 url(/static/js/404/images/sky-background.png) top repeat-x;

@@ -1,4 +1,4 @@
-#Vuex 
+#Vuex
 
   是一个专为 Vue.js 应用程序开发的状态管理模式
 
@@ -41,7 +41,7 @@
         }
     }
   })
-  
+
 # Module 模块  分割store，解决臃肿
 
   由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。
@@ -72,17 +72,8 @@
 
   # 结构
 
-  ├── index.html
-  ├── main.js
-  ├── api
-  │   └── ... # 抽取出API请求
-  ├── components
-  │   ├── App.vue
-  │   └── ...
-  └── store
-      ├── index.js          # 我们组装模块并导出 store 的地方
-      ├── actions.js        # 根级别的 action
-      ├── mutations.js      # 根级别的 mutation
-      └── modules
-        ├── cart.js       # 购物车模块
-        └── products.js   # 产品模块
+  store
+  ├── index.js          # 我们组装模块并导出 store 的地方
+  └── modules
+      ├── cart.js       # 购物车模块
+      └── products.js   # 产品模块

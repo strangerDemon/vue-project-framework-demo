@@ -1,16 +1,17 @@
 <template>
-  <div class='index'>
+  <div class='index-view'>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'index',
+    name: 'index-view',
     directives: {},
     components: {},
     props: {},
     data() {
-      return {}
+      return {
+      }
     },
     computed: {},
     watch: {},
@@ -26,7 +27,7 @@
 </script>
 
 <style lang='postcss'>
-  .index {
+  .index-view {
     position: absolute;
     width: 100%;
     height: 100%;

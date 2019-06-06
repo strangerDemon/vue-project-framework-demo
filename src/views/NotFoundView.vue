@@ -1,6 +1,6 @@
 <template>
   <div class='not-found-view'>
-    <div id="wrapper">
+    <div class="wrapper">
       <div class="graphic"></div>
       <div class="not-found-text">
         <h1 class="not-found-text">抱歉,未找到资源！</h1>
@@ -81,7 +81,7 @@
     border: 0;
     outline: 0;
   }
-  #wrapper {
+  .wrapper {
     width: 980px;
     margin: 0 auto;
     position: relative;

@@ -1,0 +1,46 @@
+{
+  "备注": {
+    "label": "复用公共参数,默认参数",
+    "defaultExpendType": "默认table展开模式",
+    "hugeExpendType": "table最大展开模式",
+    "smallExpendType": "table最小展开模式",
+    "zoomButtons": "table按钮",
+    "geoTypes":"空间数据类型"
+  },
+  "parameter": {
+    "defaultExpendType": "slid-middle-sm",
+    "hugeExpendType": "slid-huge",
+    "smallExpendType": "slid-small",
+    "zoomButtons": [
+      {
+        "code": "close",
+        "icon": "ion-close-round",
+        "label": "点击关闭"
+      },
+      {
+        "code": "expend",
+        "icon": "ion-chevron-up",
+        "label": "点击放大"
+      },
+      {
+        "code": "narrow",
+        "icon": "ion-chevron-down",
+        "label": "点击缩小"
+      }
+    ],
+    "geoTypes": [
+      {
+        "label": "点",
+        "value": "1"
+      },
+      {
+        "label": "线",
+        "value": "2"
+      },
+      {
+        "label": "面",
+        "value": "3"
+      }
+    ]
+  }
+}

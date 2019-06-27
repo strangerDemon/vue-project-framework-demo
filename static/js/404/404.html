@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="./css/main.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" type="text/css" media="all" href="./css/tipsy.css">
+	<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/custom-scripts.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			universalPreloader();
+		});
+
+		$(window).load(function () {
+			//remove Universal Preloader
+
+			universalPreloaderRemove();
+			rotate();
+
+			dogRun();
+
+			dogTalk();
+		});
+	</script>
+	<title>404 - Not found</title>
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div class="graphic"></div>
+
+		<div class="not-found-text">
+			<h1 class="not-found-text">抱歉,未找到文件！</h1>
+		</div>
+
+		<div class="dog-wrapper">
+
+			<div class="dog" style="background-position: 0px 0px;"></div>
+
+			<div class="dog-bubble" style="opacity: 1; bottom: 10px;">
+				<p>
+					<br>
+					你迷路了吗?
+				</p>
+			</div>
+
+			<div class="bubble-options">
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					别担心，我是你的向导!
+				</p>
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					<br>
+					我正在找寻
+				</p>
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					我想吃饼干了<br><img style="margin-top:8px" src="./images/cookie.png" alt="cookie">
+				</p>
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					<br>
+					我也迷路了吗?
+				</p>
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					我们是在绕圈圈吗?
+				</p>
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					<br>
+					好吧,我真的迷路了！
+				</p>
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					我刚刚好像看到了一只猫 <br><img style="margin-top:8px" src="./images/cat.png" alt="cat">
+				</p>
+				<p class="dog-bubble" style="opacity: 1; bottom: 10px;">
+					我们到底是要找什么来着? @_@
+				</p>
+			</div>
+
+
+		</div>
+
+		<div class="planet" style="transform: rotate(-120736deg);"></div>
+
+	</div>
+
+</body>
+
+</html>

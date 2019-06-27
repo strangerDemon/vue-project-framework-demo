@@ -17,6 +17,7 @@ const getters = {}
  */
 const mutations = {
   init (state,info) {
+    //http://localhost:19433/webApi.asmx/getSysConfigPara
     HttpUtils.post('getSysConfigPara', info).then(
       function (resp) {
         console.log("getSysConfigPara:",resp);

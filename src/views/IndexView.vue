@@ -1,8 +1,15 @@
 <template>
-  <div class='index-view' :style="{'background':backgroundImg}">
+  <div class='index-view' :style="{'background-image':backgroundImg}">
     <el-scrollbar>
-      <div class="first">vue template demo</div>
-      <div class="second">second</div>
+      <div class="first">
+        <div class="title">vue template demo</div>
+      </div>
+      <div class="second">
+        <div class="title">
+          second
+        </div>
+      </div>
+      <el-button class="next-button" icon="el-icon-caret-bottom" circle @click="nextPage"></el-button>
     </el-scrollbar>
     <el-backtop target=".el-scrollbar__wrap"></el-backtop>
   </div>
@@ -16,7 +23,8 @@
     props: {},
     data() {
       return {
-        backgroundImg: ""
+        backgroundImg: "",
+        currentPage: 0,
       }
     },
     computed: {},
@@ -25,12 +33,14 @@
       init() {
         let vm = this
         let random = Math.ceil(5 * Math.random());
-        vm.backgroundImg = "#186aa9 url(/static/images/background/" + random + ".jpg) top repeat-x";
-      }
+        vm.backgroundImg = "url(/static/images/background/" + random + ".jpg)";
+      },
+      nextPage() {}
     },
     brforeCreate() {},
     created() {},
     mounted() {
+      // this.$store.dispatch("init");
       this.init()
     },
     beforeDestroy() {}
@@ -43,6 +53,7 @@
     width: 100%;
     height: 100%;
     display: inline-block;
+    background-size: cover;
     overflow-y: auto;
     & .el-scrollbar {
       height: 100%;
@@ -58,19 +69,43 @@
             position: relative;
             width: 100%;
             height: 100%;
-            font-size: 10em;
-            color: #fff;
-            text-align: center;
-            line-height: 800px;
+            background-image: url("/static/images/background/index.jpg");
+            & .title {
+              font-size: 10em;
+              color: #fff;
+              text-align: center;
+              line-height: 300px;
+              transition: all 0.6s;
+            }
+            & .title:hover {
+              transform: scale(1.1);
+            }
+          }
+          & .first:hover {
+            /*transform: scale(1.25);*/
           }
           & .second {
             position: relative;
             width: 100%;
             height: 100%;
-            color: #fff;
-            font-size: 10em;
-            text-align: center;
-            line-height: 800px;
+            & .title {
+              color: #fff;
+              font-size: 10em;
+              text-align: center;
+              transition: all 2s;
+              line-height: 300px;
+            }
+            & .title:hover {
+              transform: rotate(360deg);
+            }
+          }
+          & .next-button {
+            position: fixed;
+            bottom: 50px;
+            left: calc(50% - 20px);
+            width: 40px;
+            height: 40px;
+            padding: 0px;
           }
         }
       }

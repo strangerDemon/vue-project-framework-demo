@@ -16,7 +16,7 @@ const getters = {}
  * @type {Object}
  */
 const mutations = {
-  init (state,info) {
+  initSystemPara (state,info) {
     //http://localhost:19433/webApi.asmx/getSysConfigPara
     HttpUtils.post('getSysConfigPara', info).then(
       function (resp) {
@@ -24,6 +24,11 @@ const mutations = {
       }
     );
   },
+  initAuth(state,info){
+    //
+    console.log("initAuth");
+  },
+
   query(state,info){
     console.log("query！")
   }
@@ -34,9 +39,9 @@ const mutations = {
  * @type {Object}
  */
 const actions = {
-  test (context) {
-    context.commit('init')
-    context.commit('query',{})
+  init (context) {
+    context.commit('initSystemPara')
+    context.commit('initAuth')
   }
 }
 

@@ -1,15 +1,16 @@
 <template>
   <div class='index-view' :style="{'background-image':backgroundImg}">
-    <el-scrollbar>
-      <div class="first">
+    <el-scrollbar ref="index">
+      <div id="first" class="first">
         <div class="title">vue template demo</div>
       </div>
-      <div class="second">
-        <div class="title">
-          second
+      <div id="second" class="second">
+        <div class="head-nav">
+          <div class="title">
+            second
+          </div>
         </div>
       </div>
-      <el-button class="next-button" icon="el-icon-caret-bottom" circle @click="nextPage"></el-button>
     </el-scrollbar>
     <el-backtop target=".el-scrollbar__wrap"></el-backtop>
   </div>
@@ -25,6 +26,7 @@
       return {
         backgroundImg: "",
         currentPage: 0,
+        pages: ["first", "second"]
       }
     },
     computed: {},
@@ -34,8 +36,7 @@
         let vm = this
         let random = Math.ceil(5 * Math.random());
         vm.backgroundImg = "url(/static/images/background/" + random + ".jpg)";
-      },
-      nextPage() {}
+      }
     },
     brforeCreate() {},
     created() {},
@@ -88,24 +89,22 @@
             position: relative;
             width: 100%;
             height: 100%;
-            & .title {
-              color: #fff;
-              font-size: 10em;
+            & .head-nav {
+              position: absolute;
+              width: 100%;
               text-align: center;
-              transition: all 2s;
-              line-height: 300px;
+              & .title {
+                width: auto;
+                color: #fff;
+                font-size: 10em;
+                text-align: center;
+                transition: all 2s;
+                line-height: 300px;
+              }
+              & .title:hover {
+                transform: rotate(360deg);
+              }
             }
-            & .title:hover {
-              transform: rotate(360deg);
-            }
-          }
-          & .next-button {
-            position: fixed;
-            bottom: 50px;
-            left: calc(50% - 20px);
-            width: 40px;
-            height: 40px;
-            padding: 0px;
           }
         }
       }

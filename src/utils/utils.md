@@ -5,3 +5,5 @@
     ### import ConfigUtils from "../utils/configUtils"
 
   ##httpUtils 资源请求工具类
+
+  ##otherUtils 其他工具类型

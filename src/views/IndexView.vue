@@ -5,11 +5,7 @@
         <div class="title">vue template demo</div>
       </div>
       <div id="second" class="second">
-        <div class="head-nav">
-          <div class="title">
-            second
-          </div>
-        </div>
+        <second-main></second-main>
       </div>
     </el-scrollbar>
     <el-backtop target=".el-scrollbar__wrap"></el-backtop>
@@ -17,10 +13,13 @@
 </template>
 
 <script>
+  import secondMain from "../components/Index/Second/Main"
   export default {
     name: 'index-view',
     directives: {},
-    components: {},
+    components: {
+      secondMain
+    },
     props: {},
     data() {
       return {
@@ -82,29 +81,10 @@
               transform: scale(1.1);
             }
           }
-          & .first:hover {
-            /*transform: scale(1.25);*/
-          }
           & .second {
             position: relative;
             width: 100%;
             height: 100%;
-            & .head-nav {
-              position: absolute;
-              width: 100%;
-              text-align: center;
-              & .title {
-                width: auto;
-                color: #fff;
-                font-size: 10em;
-                text-align: center;
-                transition: all 2s;
-                line-height: 300px;
-              }
-              & .title:hover {
-                transform: rotate(360deg);
-              }
-            }
           }
         }
       }

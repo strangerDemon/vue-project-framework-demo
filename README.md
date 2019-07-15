@@ -55,3 +55,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     ### 增加element-ui
     ### 增加postcss
     ### 增加404page
+
+  ## 2019/7/15
+    ### 增加second的页面以及相关动画
+      #### sign in 页面
+      #### product info 页面
